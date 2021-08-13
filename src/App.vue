@@ -12,6 +12,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 
+.admin {
+  @include color('textPrimary');
+}
 </style>

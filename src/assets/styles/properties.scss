@@ -1,0 +1,29 @@
+@import "themify";
+
+/// Темизация цвета шрифта с помощью миксина `themify` 
+/// @access public
+/// @see {mixin} themify
+@mixin color($arguments...) {
+  @include themify('color', $arguments...);
+}
+
+/// Темизация цвета границы элемента с помощью миксина `themify` 
+/// @access public
+/// @see {mixin} themify
+@mixin border-color($arguments...) {
+  @include themify('border-color', $arguments...);
+}
+
+/// Темизация цвета фона элемента с помощью миксина `themify` 
+/// @access public
+/// @see {mixin} themify
+@mixin background-color($arguments...) {
+  @include themify('background-color', $arguments...);
+}
+
+/// Темизация цвета тени элемента с помощью миксина `themify` 
+/// @access public
+/// @see {mixin} themify
+@mixin box-shadow($arguments...) {
+  @include themify('box-shadow', $arguments...);
+}

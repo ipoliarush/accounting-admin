@@ -1,0 +1,28 @@
+$themes: (
+  'light': (
+    'bgBody': #F2F4F4,
+
+    'bgCard': #FFF,
+    //'shadowCard': '-8px 12px 18px 0 rgb(25 42 70 / 13%)',
+
+    'bgMenu': #F2F4F4,
+
+    'textPrimary': #727E8C,
+    'textSecondary': #828D99,
+    'textLink': #5A8DEE,
+    'textTitle': #475F7B,
+  ),
+  'dark': (
+    'bgBody': #1A233A,
+
+    'bgCard': #272E48,
+    //'shadowCard': '-8px 12px 20px 0 rgba(59, 114, 209, 0.63)',
+
+    'bgMenu': #1A233A,
+
+    'textPrimary': #8A99B5,
+    'textSecondary': #828D99,
+    'textLink': #5A8DEE,
+    'textTitle': #BDD1F8,
+  )
+) !default;
