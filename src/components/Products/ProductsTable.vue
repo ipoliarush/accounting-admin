@@ -1,35 +1,38 @@
 <template>
   <div class="products-table">
-    <table class="table">
-      <thead class="head table__head">
-        <tr class="head__row">
-          <th class="head__item head__item--name">Наименование</th>
-          <th class="head__item">Закуплено</th>
-          <th class="head__item">Продано</th>
-          <th class="head__item">Наличие</th>
-          <th class="head__item">Резерв</th>
-          <th class="head__item">В пути</th>
-          <th class="head__item">Действия</th>
-        </tr>
-      </thead>
-      <tbody class="body table__body">
-        <tr v-for="(item, index) in products" :key="index" class="body__row">
-          <th class="body__item body__item--name">{{ item.name }}</th>
-          <th class="body__item">{{ item.purchased }}</th>
-          <th class="body__item">{{ item.sold }}</th>
-          <th class="body__item">{{ item.availability }}</th>
-          <th class="body__item">{{ item.reserve }}</th>
-          <th class="body__item">{{ item.expected }}</th>
-          <th class="body__item body__item--action">
-            <div class="body__action">
-              <div class="body__circle"></div>
-              <div class="body__circle"></div>
-              <div class="body__circle"></div>
+    <div class="table">
+      <div class="head table__head">
+        <div class="head__row">
+          <div class="head__item head__item--name">Наименование</div>
+          <div class="head__item">Закуплено</div>
+          <div class="head__item">Продано</div>
+          <div class="head__item">Наличие</div>
+          <div class="head__item">Резерв</div>
+          <div class="head__item">В пути</div>
+          <div class="head__item">Действия</div>
+        </div>
+      </div>
+      <div class="body table__body">
+        <div v-for="(item, index) in products" :key="index" class="body__row">
+          <div class="body__item body__item--name">{{ item.name }}</div>
+          <div class="body__item">{{ item.purchased }}</div>
+          <div class="body__item">{{ item.sold }}</div>
+          <div class="body__item">{{ item.availability }}</div>
+          <div class="body__item">{{ item.reserve }}</div>
+          <div class="body__item">{{ item.expected }}</div>
+          <div class="body__item">
+            <div class="body__action action">
+              <div class="action__item">
+                <font-awesome-icon :icon="['far', 'edit']" />
+              </div>
+              <div class="action__item">
+                <font-awesome-icon :icon="['far', 'trash-alt']" />
+              </div>
             </div>
-          </th>
-        </tr>
-      </tbody>
-    </table>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -76,61 +79,69 @@ export default {
   @include box-shadow('shadowTable');
 
   .table {
-    border-collapse: collapse;
     width: 100%;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
   }
+  .body {
+    display: flex;
+    flex-direction: column;
+  }
+  .head__row {
+    font-size: 12px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
 
+    @include color('colorTableHead');
+  }
+  .body__row {
+    display: flex;
+    flex-direction: row;
+  }
   .head__item, .body__item {
     padding: 15px 30px;
     font-weight: 400;
     letter-spacing: 1px;
+    flex: 1 2 200px;
+    text-align: center;
+    min-width: 120px;
 
     &--name {
-      width: 250px;
+      flex: 2 1 300px;
       text-align: left;
+      min-width: 200px;
     }
   }
-
-  .head__row {
+  .head__item {
     border-bottom: 1px solid;
-    font-size: 12px;
-    text-transform: uppercase;
-
-    @include color('colorTableHead');
     @include border-color('borderTable');
   }
-
   .body__item {
-    @include color('colorTableBody');
     font-size: 15px;
     font-weight: 300;
+    
+    @include color('colorTableBody');
+  }
+  .action {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+  }
+  .action__item {
+    margin: 0 5px;
+    cursor: pointer;
 
-    &--action {
-      
+    &:hover {
+      @include color('textLink');
     }
   }
   .body__row {
-
     &:hover {
       @include background-color('bgTableHover');
     }
   }
-  .body__action {
-    width: 10px;
-    padding: 3px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  .body__circle {
-    width: 3px;
-    height: 3px;
-    border-radius: 50%;
-    margin: 1px;
-    @include background-color('colorTableBody');
-  }
+  
 }
 </style>
