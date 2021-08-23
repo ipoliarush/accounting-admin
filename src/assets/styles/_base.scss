@@ -1,24 +1,26 @@
 body {
 	font-family: 'Rubik', sans-serif;
-	font-size: 16px;
-	font-weight: 300;
+	font-size: 15px;
+  font-weight: 400;
+	height: 100%;
+	margin: 0;
+
+	&.overflow-mm-on {
+		overflow: auto;
+	}
+
+	&.overflow-mm-off {
+		overflow: hidden;
+	}
 }
 
 .layout {
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 30px;
+	padding-right: 30px;
 	width: 100%;
-	max-width: 1472px;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
-}
-
-@media (min-width: 768px) {
-	.layout {
-		padding-left: 30px;
-		padding-right: 30px;
-	}
 }
 
 h1 {

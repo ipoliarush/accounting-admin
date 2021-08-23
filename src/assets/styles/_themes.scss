@@ -6,6 +6,21 @@ $themes: (
     //'shadowCard': '-8px 12px 18px 0 rgb(25 42 70 / 13%)',
 
     'bgMenu': #F2F4F4,
+    'borderMenu': #DFE3E7,
+    'bgMenuActive': rgba(90, 141, 238, .15),
+    'borderMenuGroup': #DFE3E7,
+
+    'bgControl': #E7EDF3,
+    'bgControlActive': #5A8DEE,
+    'bgControlItem': #FFF,
+
+    //Стили для таблиц
+    'bgTable': #F2F4F4,
+    'bgTableHover': #F2F4F4,
+    'borderTable': #DFE3E7,
+    'colorTableHead': #475F7B,
+    'colorTableBody': #727E8C,
+    'shadowTable': -8px 12px 18px 0 rgba(25, 42, 70, .13),
 
     'textPrimary': #727E8C,
     'textSecondary': #828D99,
@@ -19,10 +34,25 @@ $themes: (
     //'shadowCard': '-8px 12px 20px 0 rgba(59, 114, 209, 0.63)',
 
     'bgMenu': #1A233A,
+    'borderMenu':#464D5C,
+    'bgMenuActive': rgba(90, 141, 238, .15),
+    'borderMenuGroup': #464D5C,
+
+    'bgControl': #353D52,
+    'bgControlActive': #353D52,
+    'bgControlItem': #D6E3FB,
+
+    //Стили для таблиц
+    'bgTable': #272E48,
+    'bgTableHover': #304256,
+    'borderTable': #464D5C,
+    'colorTableHead': #BDD1F8,
+    'colorTableBody': #8A99B5,
+    'shadowTable': -8px 12px 20px 0 rgba(11, 26, 51, .63),
 
     'textPrimary': #8A99B5,
     'textSecondary': #828D99,
     'textLink': #5A8DEE,
-    'textTitle': #BDD1F8,
+    'textTitle': #475F7B,
   )
 ) !default;

@@ -11,7 +11,8 @@
   // Проход по темам
   @each $theme, $colors in $themes {
     // Создание селектора (типа .theme-unicorn .media`)
-    .theme-#{$theme} & {
+    .theme-#{$theme} &,
+    &.theme-#{$theme} {
       // Вывод декларации
       #{$property}: map-get($colors, $key);
     }
