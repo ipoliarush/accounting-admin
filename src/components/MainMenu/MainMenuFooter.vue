@@ -79,14 +79,15 @@ export default {
       content: '';
       border: 1px solid;
       border-radius: 50%;
-      width: 16px;
-      height: 16px;
+      width: 17px;
+      height: 17px;
       margin-right: 10px;
       margin-left: 10px;
 
       @include border-color('borderMenuGroup');
     }
     &::after {
+      left: 10px;
       content: '';
       position: absolute;
       height: 6px;
