@@ -1,0 +1,21 @@
+$bgBtnBlue: #5A8DEE;
+$bgBtnBlueHover: #719DF0;
+$bgBtnBlueFocus: #437DEC;
+
+@mixin btn {
+  padding: 8px 22px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out;
+}
+
+@mixin btnBlue {
+  background: #5A8DEE;
+
+  &:hover {
+    background: $bgBtnBlueHover;
+  }
+  &:focus {
+    background: $bgBtnBlueFocus;
+  }
+}
